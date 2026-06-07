@@ -1,113 +1,382 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moussa — Portfolio</title>
+    <meta name="description" content="Portfolio von Moussa — Webentwicklung, Elektronik & KI-Automatisierung" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
 
-        <!--=============== FAVICON ===============-->
-        <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
-        
-        <!--=============== REMIX ICONS ===============-->
-        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet"/>
-        
+    <!-- ==================== NAVIGATION ==================== -->
+    <nav class="nav">
+      <div class="nav-logo">Moussa<span class="nav-dot">.</span></div>
+      <div class="nav-links">
+        <a href="#ueber-mich">Über mich</a>
+        <a href="#kompetenzen">Kompetenzen</a>
+        <a href="#projekte">Projekte</a>
+        <a href="#werdegang">Werdegang</a>
+        <a href="#kontakt">Kontakt</a>
+      </div>
+      <button class="nav-menu-btn" onclick="toggleMenu()" aria-label="Menü öffnen">
+        <i class="ti ti-menu-2"></i>
+      </button>
+    </nav>
 
-        <!--=============== CSS ===============-->
-        <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#ueber-mich" onclick="toggleMenu()">Über mich</a>
+      <a href="#kompetenzen" onclick="toggleMenu()">Kompetenzen</a>
+      <a href="#projekte" onclick="toggleMenu()">Projekte</a>
+      <a href="#werdegang" onclick="toggleMenu()">Werdegang</a>
+      <a href="#kontakt" onclick="toggleMenu()">Kontakt</a>
+    </div>
 
-        <title>Mein Portfolio - Souleadowa </title>
-    </head>
-    <body>
-        <!--=============== HEADER PROFILE ===============-->
-        <header class="profile container">
-            <div class="profile__container grid">
-                <div class="profile__data">
-                    <div class="profile__border">
-                        <div class="profile__perfil">
-                            <!--Insert your image, according to the example size of the portfolio-->
-                            <img src="assets/img/photo.webp" alt="">
-                        </div>
-                    </div>
+    <!-- ==================== HERO ==================== -->
+    <section class="hero" id="ueber-mich">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <div class="hero-tag">Webentwicklung · Elektronik · KI</div>
+          <h1>Hallo, ich bin<br><span class="hero-name">Moussa</span></h1>
+          <p class="hero-desc">
+            Informatiker mit Hintergrund in Webentwicklung und aktueller Ausbildung
+            in Mechanik & Elektrotechnik. Ich verbinde Software, Hardware und
+            KI-Automatisierung — und suche einen
+            <strong>Ausbildungsplatz als Elektroniker für Geräte und Systeme</strong>
+            ab September 2026.
+          </p>
+          <div class="hero-ctas">
+            <a class="btn-primary" href="#projekte">
+              <i class="ti ti-briefcase"></i> Meine Projekte
+            </a>
+            <a class="btn-outline" href="#kontakt">
+              <i class="ti ti-mail"></i> Kontakt aufnehmen
+            </a>
+          </div>
+        </div>
+        <div class="hero-avatar">
+          <div class="avatar-circle">M</div>
+          <div class="avatar-badge">
+            <i class="ti ti-map-pin"></i> Karlsruhe, DE
+          </div>
+        </div>
+      </div>
+    </section>
 
-                    <h2 class="profile__name">Moussa Souleadowa</h2>
-                    <h2 class="profile__profession">Web Entwickler</h2>
+    <!-- ==================== KOMPETENZEN ==================== -->
+    <section class="section" id="kompetenzen">
+      <div class="section-label">Was ich kann</div>
+      <h2 class="section-title">Kompetenzen</h2>
 
-                    <ul class="profile__social">
-                        <a href="https://www.instagram.com/" target="_blank" class="profile__social-link">
-                            <i class="ri-instagram-line"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/" target="_blank" class="profile__social-link">
-                            <i class="ri-linkedin-box-line"></i>
-                        </a>
-                        <a href="https://github.com/" target="_blank" class="profile__social-link">
-                            <i class="ri-github-line"></i>
-                        </a>
-                    </ul>
-                </div>
-                
-                <div class="profile__info grid">
-                    <div class="profile__info-group">
-                        <h3 class="profile__info-nummer">3</h3>
-                        <p class="profile__info-description">
-                            Jahren <br> Erfahrung
-                        </p>
-                    </div>
-                    <div class="profile__info-group">
-                        <h3 class="profile__info-nummer">5</h3>
-                        <p class="profile__info-description">
-                            Projekte <br> abgeschlossen
-                        </p>
-                    </div>
-                    <div class="profile__info-group">
-                        <h3 class="profile__info-nummer">10</h3>
-                        <p class="profile__info-description">
-                            Zufriedene <br> Kunden
-                        </p>
-                    </div>
-                </div>
+      <div class="skills-grid">
 
-                <div class="profile__buttons">
-                    <!-- Insert your CV -->
-                    <a download ="" href="assets/pdf/souleadowa.pdf" class="button">
-                        Lebenslauf Herunterladen <i class="ri-download-line"></i>
-                    </a>
-                </div>
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <i class="ti ti-code skill-icon"></i>
+            <h3>Webentwicklung</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">PHP</span>
+            <span class="tag">Symfony</span>
+            <span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" style="width: 75%"></div>
+          </div>
+          <p class="skill-note">Licence en Informatique · aktive Weiterbildung via The Odin Project</p>
+        </div>
 
-                <div class="profile__buttons-small">
-                    <!-- Geben Sie eine echte Telefonnummer plus Landesvorwahl ein -->
-                    <a href="https://api.whatsapp.com/send?phone=+4915215769902&text=Hello, more information!" target="_blank" class="button button__small button__gray"> 
-                        <i class="ri-whatsapp-line"></i>
-                    </a>
-                    <a href="https://m.me/ibnjabar" target="_blank" class="button button__small button__gray">
-                       <i class="ri-messenger-line"></i>
-                    </a>
-                </div>
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <i class="ti ti-robot skill-icon"></i>
+            <h3>KI & Automatisierung</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Make.com</span>
+            <span class="tag">Claude API</span>
+            <span class="tag">Prompt Engineering</span>
+            <span class="tag tag-progress">In Ausbildung</span>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" style="width: 50%"></div>
+          </div>
+          <p class="skill-note">KI-Chatbots & Workflow-Automatisierung für KMUs</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <i class="ti ti-cpu skill-icon"></i>
+            <h3>Elektronik & IoT</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="tag">Elektrotechnik</span>
+            <span class="tag">Arduino</span>
+            <span class="tag">Schaltkreise</span>
+            <span class="tag tag-progress">TinyML in Vorbereitung</span>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" style="width: 55%"></div>
+          </div>
+          <p class="skill-note">Ausbildung Mechanik & Elektrotechnik · Praktikum bei Stadtwerke Karlsruhe</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <i class="ti ti-devices skill-icon"></i>
+            <h3>Tools & Systeme</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="tag">Linux Ubuntu</span>
+            <span class="tag">Git / GitHub</span>
+            <span class="tag">VS Code</span>
+            <span class="tag">LibreOffice</span>
+            <span class="tag">MS Office</span>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" style="width: 80%"></div>
+          </div>
+          <p class="skill-note">Tägliche Arbeit unter Ubuntu Linux · Portfolio auf GitHub Pages</p>
+        </div>
+
+      </div>
+
+      <!-- Sprachen -->
+      <div class="languages">
+        <div class="section-label" style="margin-top: 48px;">Sprachkenntnisse</div>
+        <div class="lang-grid">
+          <div class="lang-item">
+            <span class="lang-name">Französisch</span>
+            <span class="lang-level lang-native">Muttersprache</span>
+          </div>
+          <div class="lang-item">
+            <span class="lang-name">Deutsch</span>
+            <span class="lang-level lang-b2">B1–B2 · Goethe B2 angestrebt</span>
+          </div>
+          <div class="lang-item">
+            <span class="lang-name">Englisch</span>
+            <span class="lang-level lang-b1">Gute Kenntnisse</span>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ==================== PROJEKTE ==================== -->
+    <section class="section section-alt" id="projekte">
+      <div class="section-label">Was ich gebaut habe</div>
+      <h2 class="section-title">Projekte</h2>
+
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-icon-wrap">
+              <i class="ti ti-tools-kitchen-2"></i>
             </div>
-        </header>
+            <div class="project-meta">
+              <h3>Restaurant Website</h3>
+              <span class="project-type">Freelance · Web</span>
+            </div>
+          </div>
+          <p class="project-desc">
+            Professionelle Gastronomie-Website mit interaktiver Speisekarte,
+            Lieferando-Integration und mobilem Design.
+            Entwickelt mit HTML, CSS und JavaScript — ohne Framework.
+          </p>
+          <div class="project-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a href="https://moxix.github.io" target="_blank" rel="noopener" class="project-link">
+              <i class="ti ti-external-link"></i> Demo ansehen
+            </a>
+          </div>
+        </div>
 
-        <!--=============== MAIN ===============-->
-        <main class="main">
-            <section class="filters container">
-                <!--=============== FILTERS TABS ===============-->
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-icon-wrap">
+              <i class="ti ti-database"></i>
+            </div>
+            <div class="project-meta">
+              <h3>Gestion Triangle</h3>
+              <span class="project-type">Studienarbeit · PHP</span>
+            </div>
+          </div>
+          <p class="project-desc">
+            Webanwendung zur Datenverwaltung, entwickelt mit Symfony 5.4.
+            Deployment auf Railway mit MySQL-Datenbank und automatisierten Migrationen.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Symfony</span>
+            <span class="tag">PHP</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">Railway</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/moxix" target="_blank" rel="noopener" class="project-link">
+              <i class="ti ti-brand-github"></i> GitHub
+            </a>
+          </div>
+        </div>
 
-                <div class="filters__sections">
-                    <!--=============== PROJECTS ===============-->
-                    
+        <div class="project-card project-card-wip">
+          <div class="project-header">
+            <div class="project-icon-wrap">
+              <i class="ti ti-map-pin"></i>
+            </div>
+            <div class="project-meta">
+              <h3>CityGuide KI-App</h3>
+              <span class="project-type">In Entwicklung · KI</span>
+            </div>
+          </div>
+          <p class="project-desc">
+            KI-gestützte Web-App, die Besuchern einer unbekannten Stadt
+            personalisierte Aktivitäten nach Budget, Interessen und Wetter empfiehlt.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Claude API</span>
+            <span class="tag">Google Maps API</span>
+            <span class="tag tag-progress">In Arbeit</span>
+          </div>
+          <div class="project-links">
+            <span class="project-link-soon"><i class="ti ti-clock"></i> Demnächst verfügbar</span>
+          </div>
+        </div>
 
-                    <!--=============== SKILLS ===============-->
-                    
-                </div>
-            </section>
-        </main>
+        <div class="project-card project-card-wip">
+          <div class="project-header">
+            <div class="project-icon-wrap">
+              <i class="ti ti-robot"></i>
+            </div>
+            <div class="project-meta">
+              <h3>KI-Kundenservice Bot</h3>
+              <span class="project-type">In Entwicklung · Automatisierung</span>
+            </div>
+          </div>
+          <p class="project-desc">
+            Automatisierter Kundendienst-Chatbot für kleine und mittelständische
+            Unternehmen. Integration via Make.com und WhatsApp Business API.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Make.com</span>
+            <span class="tag">Claude API</span>
+            <span class="tag">WhatsApp API</span>
+            <span class="tag tag-progress">In Arbeit</span>
+          </div>
+          <div class="project-links">
+            <span class="project-link-soon"><i class="ti ti-clock"></i> Demnächst verfügbar</span>
+          </div>
+        </div>
 
-        <!--=============== FOOTER ===============-->
-        <footer class="footer container">
-            
-        </footer>
+      </div>
+    </section>
 
-        <!--=============== SCROLLREVEAL ===============-->
-        <script src=""></script>
+    <!-- ==================== WERDEGANG ==================== -->
+    <section class="section" id="werdegang">
+      <div class="section-label">Mein Weg</div>
+      <h2 class="section-title">Werdegang</h2>
 
-        <!--=============== MAIN JS ===============-->
-        <script src="assets/js/main.js"></script>
-    </body>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-dot current"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2025 – 2026</div>
+            <h3>Berufsintegrationsprogramm</h3>
+            <div class="timeline-place">
+              <i class="ti ti-building-community"></i>
+              Carl-Benz-Schule · Karlsruhe
+            </div>
+            <p>Ausbildung in Mechanik & Elektrotechnik. Praktikum bei Stadtwerke Karlsruhe. Ziel: Ausbildungsplatz als Elektroniker für Geräte und Systeme ab September 2026.</p>
+            <span class="timeline-tag current-tag">Aktuell</span>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2019 – 2023</div>
+            <h3>Licence en Informatique</h3>
+            <div class="timeline-place">
+              <i class="ti ti-school"></i>
+              Université · Informatik & Webentwicklung
+            </div>
+            <p>Bachelor-Äquivalent in Informatik. Schwerpunkte: Webentwicklung, Datenbanken, Algorithmen. Abschluss als Allgemeine Hochschulreife anerkannt.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">Parallel</div>
+            <h3>Selbststudium & Weiterbildung</h3>
+            <div class="timeline-place">
+              <i class="ti ti-device-laptop"></i>
+              The Odin Project · Kaggle · Edge Impulse
+            </div>
+            <p>Aktive Weiterbildung in modernem Webentwicklung (The Odin Project), Python & Machine Learning (Kaggle) sowie Embedded AI / TinyML (Edge Impulse).</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== KONTAKT ==================== -->
+    <section class="section section-alt" id="kontakt">
+      <div class="section-label">Schreiben Sie mir</div>
+      <h2 class="section-title">Kontakt</h2>
+
+      <div class="contact-wrap">
+        <div class="contact-intro">
+          <p>
+            Ich bin offen für Ausbildungsstellen als <strong>Elektroniker für Geräte und Systeme</strong>
+            sowie für Freelance-Projekte im Bereich Webentwicklung und KI-Automatisierung.
+            Sprechen Sie mich gerne an.
+          </p>
+        </div>
+        <div class="contact-cards">
+          <a class="contact-card-link" href="mailto:moussa@example.com">
+            <i class="ti ti-mail"></i>
+            <span>moussa@example.com</span>
+            <i class="ti ti-arrow-right arrow"></i>
+          </a>
+          <a class="contact-card-link" href="https://moxix.github.io" target="_blank" rel="noopener">
+            <i class="ti ti-world"></i>
+            <span>moxix.github.io</span>
+            <i class="ti ti-arrow-right arrow"></i>
+          </a>
+          <a class="contact-card-link" href="https://github.com/moxix" target="_blank" rel="noopener">
+            <i class="ti ti-brand-github"></i>
+            <span>github.com/moxix</span>
+            <i class="ti ti-arrow-right arrow"></i>
+          </a>
+          <div class="contact-card-link contact-location">
+            <i class="ti ti-map-pin"></i>
+            <span>Karlsruhe / Mannheim, Baden-Württemberg</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+      <div class="footer-logo">Moussa<span class="nav-dot">.</span></div>
+      <div class="footer-right">Karlsruhe · © 2025 · Gebaut mit HTML & CSS</div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>
